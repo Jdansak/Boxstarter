@@ -1,7 +1,19 @@
-# http://boxstarter.org/package/url? 
+ # http://boxstarter.org/package/url?
+
+#update windows
+Install-WindowsUpdate -acceptEula -getUpdatesFromMS
 
 # Windows configuration
 Update-ExecutionPolicy RemoteSigned
 Enable-RemoteDesktop
 Set-ExplorerOptions -showFileExtensions
 
+choco install greenshot 
+choco install 7zip.install 
+choco install conemu
+choco install emacs 
+
+# python Stuff
+choco install python3 
+choco install pip
+choco install pycharm-community 
