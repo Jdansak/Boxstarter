@@ -1,0 +1,7 @@
+# http://boxstarter.org/package/url? 
+
+# Windows configuration
+Update-ExecutionPolicy RemoteSigned
+Enable-RemoteDesktop
+Set-ExplorerOptions -showFileExtensions
+
