@@ -3,18 +3,18 @@
 
 
 #update windows
-
-Install-WindowsUpdate -acceptEula -getUpdatesFromMS
-
+set-ExecutionPolicy Unrestricted -Force
 
 
 # Windows configuration
 Rename-Computer -ComputerName surface-JRD
-Update-ExecutionPolicy RemoteSigned
+Set-TaskbarOptions -Size Small -Lock -Dock Top -Combine Always
 Enable-RemoteDesktop
 Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions -EnableShowFullPathInTitleBar
 
 
+
+Install-WindowsUpdate -acceptEula -getUpdatesFromMS
 choco install chocolatey
 choco install greenshot 
 choco install 7zip.install 
@@ -25,8 +25,11 @@ choco install git.install
 choco install poshgit
 choco install paint.net
 choco install calibre   
+choco install expresso 
 
 # python Stuff
 choco install python3 
 choco install pip
 choco install pycharm-community 
+
+Set-ExecutionPolicy RemoteSigned -force
