@@ -1,3 +1,5 @@
+
+
 # http://boxstarter.org/package/url?
 
 
@@ -31,5 +33,11 @@ choco install expresso
 choco install python3 
 choco install pip
 choco install pycharm-community 
+
+Install-PackageProvider NuGet -Force
+Import-PackageProvider NuGet -Force
+
+Install-Module posh-git -Force
+install-module iSEsteroids -Force
 
 Set-ExecutionPolicy RemoteSigned -force
