@@ -21,7 +21,7 @@ choco install chocolatey
 choco install greenshot 
 choco install 7zip.install 
 choco install conemu
-choco install emacs 
+# choco install emacs 
 choco install dropbox
 choco install git.install
 choco install poshgit
@@ -38,6 +38,8 @@ Install-PackageProvider NuGet -Force
 Import-PackageProvider NuGet -Force
 
 Install-Module posh-git -Force
-install-module iSEsteroids -Force
+install-Module ISEsteroids -Force
+Install-Module -Name   -Force
+
 
 Set-ExecutionPolicy RemoteSigned -force
