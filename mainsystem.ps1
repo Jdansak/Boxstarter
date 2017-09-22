@@ -1,7 +1,11 @@
 
+# http://boxstarter.org/package/url?https://raw.githubusercontent.com/Jdansak/Boxstarter/master/mainsystem.ps1
 
-# http://boxstarter.org/package/url?
-
+$mac = ((Get-NetAdapter -Physical | 
+where-object {$_.name -match '^[WI|ether]\w+'} | 
+Where-Object {$_.status -Match 'Up'})[0] | 
+select -ExpandProperty MacAddress) -replace '-', ''
+$mac = 'D' + $mac
 
 
 #update windows
@@ -9,7 +13,7 @@ set-ExecutionPolicy Unrestricted -Force
 
 
 # Windows configuration
-Rename-Computer -ComputerName surface-JRD
+Rename-Computer -ComputerName $mac -force 
 Set-TaskbarOptions -Size Small -Lock -Dock Top -Combine Always
 Enable-RemoteDesktop
 Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions -EnableShowFullPathInTitleBar
