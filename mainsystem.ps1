@@ -27,12 +27,25 @@ choco install citrix-receiver
 choco install virtualbox 
 choco install vagrant
 choco install rufus 
-
+choco install cygwin 
+choco install cyg-get 
 
 # python Stuff
 choco install python3 
 choco install pip
 choco install pycharm-community 
+
+#games
+choco install battle.net 
+choco install steam
+
+
+#cygwin Stuff
+cyg-get ssh
+cyg-get rsync
+cyg-get nano
+cyg-get tmux
+
 
 Install-PackageProvider NuGet -Force
 Import-PackageProvider NuGet -Force
