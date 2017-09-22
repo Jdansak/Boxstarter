@@ -9,18 +9,18 @@ $mac = 'D' + $mac
 
 
 #update windows
-set-ExecutionPolicy Unrestricted -Force
+#set-ExecutionPolicy Unrestricted -Force
 
 
 # Windows configuration
 Rename-Computer -ComputerName $mac -force 
-Set-TaskbarOptions -Size Small -Lock -Dock Top -Combine Always
-Enable-RemoteDesktop
+#Set-TaskbarOptions -Size Small -Lock -Dock Top -Combine Always
+#Enable-RemoteDesktop
 Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions -EnableShowFullPathInTitleBar
 
 
 
-Install-WindowsUpdate -acceptEula -getUpdatesFromMS
+
 choco install chocolatey
 choco install 7zip.install 
 choco install visualstudiocode
@@ -58,5 +58,5 @@ Install-Module posh-git -Force
 install-Module ISEsteroids -Force
 
 
-
+Install-WindowsUpdate -acceptEula -getUpdatesFromMS
 Set-ExecutionPolicy RemoteSigned -force
