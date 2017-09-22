@@ -18,16 +18,16 @@ Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFile
 
 Install-WindowsUpdate -acceptEula -getUpdatesFromMS
 choco install chocolatey
-choco install greenshot 
 choco install 7zip.install 
-choco install conemu
-# choco install emacs 
+choco install visualstudiocode
 choco install dropbox
-choco install git.install
-choco install poshgit
-choco install paint.net
 choco install calibre   
 choco install expresso 
+choco install citrix-receiver 
+choco install virtualbox 
+choco install vagrant
+choco install rufus 
+
 
 # python Stuff
 choco install python3 
@@ -39,7 +39,7 @@ Import-PackageProvider NuGet -Force
 
 Install-Module posh-git -Force
 install-Module ISEsteroids -Force
-Install-Module -Name   -Force
+
 
 
 Set-ExecutionPolicy RemoteSigned -force
