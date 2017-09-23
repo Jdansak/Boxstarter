@@ -1,4 +1,3 @@
-
 # http://boxstarter.org/package/url?https://raw.githubusercontent.com/Jdansak/Boxstarter/master/mainsystem.ps1
 
 $mac = ((Get-NetAdapter -Physical | 
@@ -50,6 +49,9 @@ cyg-get rsync
 cyg-get nano
 cyg-get tmux
 
+#VS code stuff
+code --install-extension fdidron.theme-panictheme
+ms-vscode.powershell
 
 Install-PackageProvider NuGet -Force
 Import-PackageProvider NuGet -Force
