@@ -1,3 +1,6 @@
+
+
+choco feature enable -n allowGlobalConfirmation
 # http://boxstarter.org/package/url?https://raw.githubusercontent.com/Jdansak/Boxstarter/master/mainsystem.ps1
 
 $mac = ((Get-NetAdapter -Physical | 
